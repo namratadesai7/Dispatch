@@ -15,8 +15,6 @@ if(isset($_POST['pdrum'])){
     $run='';
 
     
-
-
     foreach( $gweight as $key => $value){
 
         if(empty( $value) || empty( $date) || empty( $billno) || empty( $dsize[$key]) || empty( $dlength[$key])){   
@@ -35,8 +33,6 @@ if(isset($_POST['pdrum'])){
         //echo $sql;
        
         }
-
-      
     }
     if($run){
         echo("saved successfully");
@@ -70,7 +66,6 @@ if(isset($_POST['id'])){
         $run=sqlsrv_query($conn,$sql);
         //echo $sql;
     }
-
     if($run){
       echo("saved successfully");
     }

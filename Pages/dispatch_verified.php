@@ -42,7 +42,7 @@ list($startYear, $endYear) = explode('-', $financialYear);
                 SUM(DQTY) AS dqty,
                 SUM(TRY_CAST(GrossWeight AS float)) AS w
                 FROM
-                    Dispatch where DBILLNO IN(SELECT Billno FROM Verify) AND DDATE >= CONVERT(DATE, CONCAT('01-04-', $startYear), 5) 
+                Dispatch where DBILLNO IN(SELECT Billno FROM Verify) AND DDATE >= CONVERT(DATE, CONCAT('01-04-', $startYear), 5) 
                 AND DDATE <= CONVERT(DATE, CONCAT('31-03-', $endYear), 5) 
                 group by DBILLNO";
            

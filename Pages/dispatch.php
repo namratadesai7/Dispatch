@@ -299,7 +299,7 @@ $date=date('Y-m-d');
     // }else{
     $.ajax({
         url:'dispatch_data.php',
-        type:'post',
+        type:'post',    
         data:{pono:pono,jobno:jobno,billno:billno,financial_year:year},
         success:function(data){
             $('#showdata').html(data);
